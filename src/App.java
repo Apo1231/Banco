@@ -1,7 +1,6 @@
-
 import java.util.ArrayList;
 
-public class App {
+class App {
     private ArrayList<Cuenta> cuentas = new ArrayList<>();
 
     public void agregarCuenta(Cuenta cuenta) {
@@ -12,11 +11,6 @@ public class App {
         for (Cuenta c : cuentas) {
             if (c.getNumeroCuenta().equals(numero)) return c;
         }
-
-
-
-
-
         return null;
     }
 }
