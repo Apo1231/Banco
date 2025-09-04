@@ -1,27 +1,30 @@
 public class Cuenta {
 
-    private String numeroCuenta;
-    private double saldo;
-    private Cliente titular;
 
-    public Cuenta(String numeroCuenta, Cliente titular, double saldoInicial) {
-        this.numeroCuenta = numeroCuenta;
-        this.titular = titular;
-        this.saldo = saldoInicial;
-    }
+        private String numeroCuenta;
+        private double saldo;
+        private Cliente titular;
 
-    public void depositar(double cantidad) {
-        saldo += cantidad;
-    }
+        public Cuenta(String numeroCuenta, Cliente titular, double saldoInicial) {
+            this.numeroCuenta = numeroCuenta;
+            this.titular = titular;
+            this.saldo = saldoInicial;
+        }
 
-    public boolean retirar(double cantidad) {
-        if (cantidad > saldo) return false;
-        saldo -= cantidad;
-        return true;
-    }
+        public void depositar(double cantidad) {
+            saldo += cantidad;
+        }
 
-    public double getSaldo() { return saldo; }
-    public String getNumeroCuenta() { return numeroCuenta; }
-    public Cliente getTitular() { return titular; }
+        public boolean retirar(double cantidad) {
+            if (cantidad > saldo) return false;
+            saldo -= cantidad;
+            return true;
+        }
+
+        public double getSaldo() { return saldo; }
+        public String getNumeroCuenta() { return numeroCuenta; }
+        public Cliente getTitular() { return titular; }
+
+
 
 }
